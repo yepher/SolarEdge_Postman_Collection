@@ -1,6 +1,10 @@
 # SolarEdge [PostMan](https://www.getpostman.com) Collection
 
-![SolarEdge](https://www.solaredge.com/sites/default/files/logo.svg =80x) in ![PostMan](https://www.getpostman.com/img/v2/logo-white.svg =80x) 
+
+<img src="https://www.solaredge.com/sites/default/files/logo.svg" alt="drawing" style="width: 100px;"/> API in 
+<img src="https://www.getpostman.com/img/v2/logo-white.svg" alt="drawing" style="width: 100px;"/>
+
+![SolarEdge](https://www.solaredge.com/sites/default/files/logo.svg) in ![PostMan](https://www.getpostman.com/img/v2/logo-white.svg) 
 
 
 A Postman collection for [SolarEdge API](https://www.solaredge.com/sites/default/files/se_monitoring_api.pdf)
