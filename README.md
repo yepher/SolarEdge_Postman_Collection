@@ -1,7 +1,7 @@
 # SolarEdge [PostMan](https://www.getpostman.com) Collection
 
 
-<img src="https://www.solaredge.com/sites/default/files/logo.svg" alt="drawing" style=width: 80px;height: 80px"/> API in 
+<img src="https://www.solaredge.com/sites/default/files/logo.svg" alt="drawing" style="width: 80px;height: 80px"/> API in 
 <img src="https://www.getpostman.com/img/v2/logo-white.svg" alt="drawing" style="width: 80px;height: 80px"/>
 
 
