@@ -1,4 +1,7 @@
-# SolarEdge ![PostMan](https://www.getpostman.com/img/v2/logo-white.svg) Collection
+# SolarEdge [PostMan](https://www.getpostman.com) Collection
+
+![SolarEdge](https://www.solaredge.com/sites/default/files/logo.svg) in ![PostMan](https://www.getpostman.com/img/v2/logo-white.svg) 
+
 
 A Postman collection for [SolarEdge API](https://www.solaredge.com/sites/default/files/se_monitoring_api.pdf)
 
