@@ -144,7 +144,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/energy?timeUnit=DAY&endDate=2018-05-08&startDate=2018-05-04&api_key={{API_KEY}}",
+					"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/energy?timeUnit=DAY&endDate={{END_DATE}}&startDate={{START_DATE}}&api_key={{API_KEY}}",
 					"protocol": "https",
 					"host": [
 						"monitoringapi",
@@ -163,11 +163,11 @@
 						},
 						{
 							"key": "endDate",
-							"value": "2018-05-08"
+							"value": "{{END_DATE}}"
 						},
 						{
 							"key": "startDate",
-							"value": "2018-05-04"
+							"value": "{{START_DATE}}"
 						},
 						{
 							"key": "api_key",
@@ -185,7 +185,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "https://monitoringapi.solaredge.com/sites/{{SITE_ID}}/energy? timeUnit=DAY&startDate=2018-05-04&endDate=2018-05-8&api_key={{API_KEY}}",
+					"raw": "https://monitoringapi.solaredge.com/sites/{{SITE_ID}}/energy? timeUnit=DAY&endDate={{END_DATE}}&startDate={{START_DATE}}&api_key={{API_KEY}}",
 					"protocol": "https",
 					"host": [
 						"monitoringapi",
@@ -203,12 +203,12 @@
 							"value": "DAY"
 						},
 						{
-							"key": "startDate",
-							"value": "2018-05-04"
+							"key": "endDate",
+							"value": "{{END_DATE}}"
 						},
 						{
-							"key": "endDate",
-							"value": "2018-05-8"
+							"key": "startDate",
+							"value": "{{START_DATE}}"
 						},
 						{
 							"key": "api_key",
@@ -226,7 +226,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/timeFrameEnergy?startDate=2018-05-04&endDate=2018-05-08&api_key={{API_KEY}}",
+					"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/timeFrameEnergy?endDate={{END_DATE}}&startDate={{START_DATE}}&api_key={{API_KEY}}",
 					"protocol": "https",
 					"host": [
 						"monitoringapi",
@@ -240,12 +240,12 @@
 					],
 					"query": [
 						{
-							"key": "startDate",
-							"value": "2018-05-04"
+							"key": "endDate",
+							"value": "{{END_DATE}}"
 						},
 						{
-							"key": "endDate",
-							"value": "2018-05-08"
+							"key": "startDate",
+							"value": "{{START_DATE}}"
 						},
 						{
 							"key": "api_key",
@@ -263,7 +263,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/power?startTime=2018-05-4%2011:00:00&endTime=2018-05-08%2013:00:00&api_key={{API_KEY}}",
+					"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/power?startTime={{START_DATE_TIME}}&endTime={{END_DATE_TIME}}&api_key={{API_KEY}}",
 					"protocol": "https",
 					"host": [
 						"monitoringapi",
@@ -278,11 +278,11 @@
 					"query": [
 						{
 							"key": "startTime",
-							"value": "2018-05-4%2011:00:00"
+							"value": "{{START_DATE_TIME}}"
 						},
 						{
 							"key": "endTime",
-							"value": "2018-05-08%2013:00:00"
+							"value": "{{END_DATE_TIME}}"
 						},
 						{
 							"key": "api_key",
@@ -392,7 +392,7 @@
 				"header": [],
 				"body": {},
 				"url": {
-					"raw": "https://monitoringapi.solaredge.com/equipment/{{SITE_ID}} /{{INVERTER_SN}}/data?startTime=2018-05-04%2011:00:00&endTime=2018-05-08%2013:00:00&api_key={{API_KEY}}",
+					"raw": "https://monitoringapi.solaredge.com/equipment/{{SITE_ID}} /{{INVERTER_SN}}/data?startTime={{START_DATE_TIME}}&endTime={{END_DATE_TIME}}&api_key={{API_KEY}}",
 					"protocol": "https",
 					"host": [
 						"monitoringapi",
@@ -408,11 +408,11 @@
 					"query": [
 						{
 							"key": "startTime",
-							"value": "2018-05-04%2011:00:00"
+							"value": "{{START_DATE_TIME}}"
 						},
 						{
 							"key": "endTime",
-							"value": "2018-05-08%2013:00:00"
+							"value": "{{END_DATE_TIME}}"
 						},
 						{
 							"key": "api_key",
