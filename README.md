@@ -4,13 +4,15 @@ A Postman collection for [SolarEdge API](https://www.solaredge.com/sites/default
 
 
 <img src="https://www.solaredge.com/sites/default/files/logo.svg" alt="drawing" height="80" width="160"/> API in 
-<img src="https://www.getpostman.com/img/v2/logo-white.svg" alt="drawing" height="80" width="80"/>
+<img src="https://www.postman.com/assets/logos/postman-logo-stacked.svg" alt="drawing" height="80" width="80"/>
 
+Requests beginning with **[!]** haven't yet been fully documented.
+
+### PR's and contributions are encouraged!
 
 ## Usage
 
 This collection requires some [Postman variables](http://blog.getpostman.com/2014/02/20/using-variables-inside-postman-and-collection-runner/) to be setup before usage.
-
 
 | Variable  |  Example | Description  |
 |---|:-:|---|
