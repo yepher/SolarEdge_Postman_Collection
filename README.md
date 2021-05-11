@@ -6,7 +6,7 @@ A Postman collection for [SolarEdge API](https://www.solaredge.com/sites/default
 <img src="https://www.solaredge.com/sites/default/files/logo.svg" alt="drawing" height="80" width="160"/> API in 
 <img src="https://www.postman.com/assets/logos/postman-logo-stacked.svg" alt="drawing" height="80" width="80"/>
 
-Requests beginning with **[!]** haven't yet been fully documented.
+Requests beginning with **[!]** haven't yet been documented.
 At this current time almost all requests are missing description.
 
 ### PR's and contributions are encouraged!
