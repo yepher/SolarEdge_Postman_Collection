@@ -1,558 +1,1041 @@
 {
 	"info": {
-		"_postman_id": "ceaa3324-3ac3-4d93-bc50-79d9554967fc",
+		"_postman_id": "5e6de562-dc7f-450d-9681-d52c9cf4c728",
 		"name": "SolarEdge",
-		"description": "SolarEdge REST API\nhttps://www.solaredge.com/sites/default/files/se_monitoring_api.pdf",
+		"description": "SolarEdge REST API\nhttps://www.solaredge.com/sites/default/files/se_monitoring_api.pdf\n\nBased on the revision from Wed 16 Jan 2019 (latest at time of writing).\nThough even at the current time there seem to be differences between PDF and live API.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Site List",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://monitoringapi.solaredge.com/sites/list?size=5&searchText=Lyon&sortProperty=name&sortOrder=ASC&api_key={{API_KEY}}",
-					"protocol": "https",
-					"host": [
-						"monitoringapi",
-						"solaredge",
-						"com"
-					],
-					"path": [
-						"sites",
-						"list"
-					],
-					"query": [
-						{
-							"key": "size",
-							"value": "5"
-						},
-						{
-							"key": "searchText",
-							"value": "Lyon"
-						},
-						{
-							"key": "sortProperty",
-							"value": "name"
-						},
-						{
-							"key": "sortOrder",
-							"value": "ASC"
-						},
-						{
-							"key": "api_key",
-							"value": "{{API_KEY}}"
+			"name": "Site Data",
+			"item": [
+				{
+					"name": "Site List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/sites/list?size=5&sortProperty=name&sortOrder=ASC",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"sites",
+								"list"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sortProperty",
+									"value": "name"
+								},
+								{
+									"key": "sortOrder",
+									"value": "ASC"
+								}
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Site Details",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/details?api_key={{API_KEY}}",
-					"protocol": "https",
-					"host": [
-						"monitoringapi",
-						"solaredge",
-						"com"
-					],
-					"path": [
-						"site",
-						"{{SITE_ID}}",
-						"details"
-					],
-					"query": [
-						{
-							"key": "api_key",
-							"value": "{{API_KEY}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Site Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/details",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"site",
+								"{{SITE_ID}}",
+								"details"
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Site Data: Start and End Dates",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/dataPeriod?api_key={{API_KEY}}",
-					"protocol": "https",
-					"host": [
-						"monitoringapi",
-						"solaredge",
-						"com"
-					],
-					"path": [
-						"site",
-						"{{SITE_ID}}",
-						"dataPeriod"
-					],
-					"query": [
-						{
-							"key": "api_key",
-							"value": "{{API_KEY}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Site Data: Start and End Dates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/dataPeriod",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"site",
+								"{{SITE_ID}}",
+								"dataPeriod"
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Site Data: Bulk Version",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://monitoringapi.solaredge.com/sites/{{SITE_ID}}/dataPeriod?api_key={{API_KEY}}",
-					"protocol": "https",
-					"host": [
-						"monitoringapi",
-						"solaredge",
-						"com"
-					],
-					"path": [
-						"sites",
-						"{{SITE_ID}}",
-						"dataPeriod"
-					],
-					"query": [
-						{
-							"key": "api_key",
-							"value": "{{API_KEY}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Site Data: Bulk Version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/sites/{{SITES_ID}}/dataPeriod",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"sites",
+								"{{SITES_ID}}",
+								"dataPeriod"
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Site Energy",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/energy?timeUnit=DAY&endDate={{END_DATE}}&startDate={{START_DATE}}&api_key={{API_KEY}}",
-					"protocol": "https",
-					"host": [
-						"monitoringapi",
-						"solaredge",
-						"com"
-					],
-					"path": [
-						"site",
-						"{{SITE_ID}}",
-						"energy"
-					],
-					"query": [
-						{
-							"key": "timeUnit",
-							"value": "DAY"
-						},
-						{
-							"key": "endDate",
-							"value": "{{END_DATE}}"
-						},
-						{
-							"key": "startDate",
-							"value": "{{START_DATE}}"
-						},
-						{
-							"key": "api_key",
-							"value": "{{API_KEY}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Site Energy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/energy?timeUnit=DAY&endDate={{END_DATE}}&startDate={{START_DATE}}",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"site",
+								"{{SITE_ID}}",
+								"energy"
+							],
+							"query": [
+								{
+									"key": "timeUnit",
+									"value": "DAY"
+								},
+								{
+									"key": "endDate",
+									"value": "{{END_DATE}}"
+								},
+								{
+									"key": "startDate",
+									"value": "{{START_DATE}}"
+								}
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Site Energy: Bulk Version",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://monitoringapi.solaredge.com/sites/{{SITE_ID}}/energy? timeUnit=DAY&endDate={{END_DATE}}&startDate={{START_DATE}}&api_key={{API_KEY}}",
-					"protocol": "https",
-					"host": [
-						"monitoringapi",
-						"solaredge",
-						"com"
-					],
-					"path": [
-						"sites",
-						"{{SITE_ID}}",
-						"energy"
-					],
-					"query": [
-						{
-							"key": " timeUnit",
-							"value": "DAY"
-						},
-						{
-							"key": "endDate",
-							"value": "{{END_DATE}}"
-						},
-						{
-							"key": "startDate",
-							"value": "{{START_DATE}}"
-						},
-						{
-							"key": "api_key",
-							"value": "{{API_KEY}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Site Energy: Bulk Version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/sites/{{SITES_ID}}/energy?timeUnit=DAY&endDate={{END_DATE}}&startDate={{START_DATE}}",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"sites",
+								"{{SITES_ID}}",
+								"energy"
+							],
+							"query": [
+								{
+									"key": "timeUnit",
+									"value": "DAY"
+								},
+								{
+									"key": "endDate",
+									"value": "{{END_DATE}}"
+								},
+								{
+									"key": "startDate",
+									"value": "{{START_DATE}}"
+								}
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Site Energy – Time Period",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/timeFrameEnergy?endDate={{END_DATE}}&startDate={{START_DATE}}&api_key={{API_KEY}}",
-					"protocol": "https",
-					"host": [
-						"monitoringapi",
-						"solaredge",
-						"com"
-					],
-					"path": [
-						"site",
-						"{{SITE_ID}}",
-						"timeFrameEnergy"
-					],
-					"query": [
-						{
-							"key": "endDate",
-							"value": "{{END_DATE}}"
-						},
-						{
-							"key": "startDate",
-							"value": "{{START_DATE}}"
-						},
-						{
-							"key": "api_key",
-							"value": "{{API_KEY}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Site Energy – Time Period",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/timeFrameEnergy?endDate={{END_DATE}}&startDate={{START_DATE}}",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"site",
+								"{{SITE_ID}}",
+								"timeFrameEnergy"
+							],
+							"query": [
+								{
+									"key": "endDate",
+									"value": "{{END_DATE}}"
+								},
+								{
+									"key": "startDate",
+									"value": "{{START_DATE}}"
+								}
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Site Power",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/power?startTime={{START_DATE_TIME}}&endTime={{END_DATE_TIME}}&api_key={{API_KEY}}",
-					"protocol": "https",
-					"host": [
-						"monitoringapi",
-						"solaredge",
-						"com"
-					],
-					"path": [
-						"site",
-						"{{SITE_ID}}",
-						"power"
-					],
-					"query": [
-						{
-							"key": "startTime",
-							"value": "{{START_DATE_TIME}}"
-						},
-						{
-							"key": "endTime",
-							"value": "{{END_DATE_TIME}}"
-						},
-						{
-							"key": "api_key",
-							"value": "{{API_KEY}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Site Energy - Time Period: Bulk Version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/sites/{{SITES_ID}}/timeFrameEnergy?startDate={{START_DATE}}&endDate={{END_DATE}}",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"sites",
+								"{{SITES_ID}}",
+								"timeFrameEnergy"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "{{START_DATE}}"
+								},
+								{
+									"key": "endDate",
+									"value": "{{END_DATE}}"
+								}
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Site Environmental Benefits",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/envBenefits?systemUnits=Imperial&api_key={{API_KEY}}",
-					"protocol": "https",
-					"host": [
-						"monitoringapi",
-						"solaredge",
-						"com"
-					],
-					"path": [
-						"site",
-						"{{SITE_ID}}",
-						"envBenefits"
-					],
-					"query": [
+					},
+					"response": [
 						{
-							"key": "systemUnits",
-							"value": "Imperial"
-						},
-						{
-							"key": "api_key",
-							"value": "{{API_KEY}}"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Components List",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://monitoringapi.solaredge.com/equipment/{{SITE_ID}}/list?api_key={{API_KEY}}",
-					"protocol": "https",
-					"host": [
-						"monitoringapi",
-						"solaredge",
-						"com"
-					],
-					"path": [
-						"equipment",
-						"{{SITE_ID}}",
-						"list"
-					],
-					"query": [
-						{
-							"key": "api_key",
-							"value": "{{API_KEY}}"
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://monitoringapi.solaredge.com/sites/{{SITES_ID}}/timeFrameEnergy?startDate={{START_DATE}}&endDate={{END_DATE}}",
+									"protocol": "https",
+									"host": [
+										"monitoringapi",
+										"solaredge",
+										"com"
+									],
+									"path": [
+										"sites",
+										"{{SITES_ID}}",
+										"timeFrameEnergy"
+									],
+									"query": [
+										{
+											"key": "startDate",
+											"value": "{{START_DATE}}"
+										},
+										{
+											"key": "endDate",
+											"value": "{{END_DATE}}"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"timeFrameEnergyList\": {\n        \"count\": 1,\n        \"timeFrameEnergyList\": [\n            {\n                \"siteId\": 1,\n                \"timeFrameEnergy\": {\n                    \"energy\": 6412648.0,\n                    \"unit\": \"Wh\",\n                    \"measuredBy\": \"INVERTER\",\n                    \"endLifetimeEnergy\": {\n                        \"date\": \"2021-03-22\",\n                        \"energy\": 6416308.5,\n                        \"unit\": \"Wh\"\n                    }\n                }\n            }\n        ]\n    }\n}"
 						}
 					]
 				},
-				"description": ": Return a list of inverters/SMIs in the specific site."
-			},
-			"response": []
+				{
+					"name": "Site Power",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/power?startTime={{START_DATE_TIME}}&endTime={{END_DATE_TIME}}",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"site",
+								"{{SITE_ID}}",
+								"power"
+							],
+							"query": [
+								{
+									"key": "startTime",
+									"value": "{{START_DATE_TIME}}"
+								},
+								{
+									"key": "endTime",
+									"value": "{{END_DATE_TIME}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Site Power: Bulk version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/sites/{{SITES_ID}}/power?startTime={{START_DATE_TIME}}&endTime={{END_DATE_TIME}}",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"sites",
+								"{{SITES_ID}}",
+								"power"
+							],
+							"query": [
+								{
+									"key": "startTime",
+									"value": "{{START_DATE_TIME}}"
+								},
+								{
+									"key": "endTime",
+									"value": "{{END_DATE_TIME}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Site Overview",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/overview",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"site",
+								"{{SITE_ID}}",
+								"overview"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Site Overview: Bulk Version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/sites/{{SITES_ID}}/overview",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"sites",
+								"{{SITES_ID}}",
+								"overview"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Site Power - Detailed",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/powerDetails?meters=SelfConsumption&startTime={{START_DATE_TIME}}&endTime={{END_DATE_TIME}}",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"site",
+								"{{SITE_ID}}",
+								"powerDetails"
+							],
+							"query": [
+								{
+									"key": "meters",
+									"value": "SelfConsumption",
+									"description": "Select specific meters only. If this value is omitted, all meter readings are\nreturned.  \nValue shall include entries from the following list separated by comma:\n- Production- AC production power meter / inverter production AC power\n(fallback)\n- Consumption - Consumption meter\n- SelfConsumption - virtual self-consumption (calculated)\n- FeedIn - Export to GRID meter\n- Purchased - Import power from GRID meter"
+								},
+								{
+									"key": "startTime",
+									"value": "{{START_DATE_TIME}}"
+								},
+								{
+									"key": "endTime",
+									"value": "{{END_DATE_TIME}}"
+								}
+							]
+						},
+						"description": "Detailed site power measurements from meters such as consumption, export (feed-in), import (purchase), etc.\n\nNote: Calculated meter readings (also referred to as \"virtual meters\"), such as self-consumption, are calculated using the data\nmeasured by the meter and the inverters\n\n**Usage limitation:** This API is limited to one-month period. This means that the period between endTime and startTime\nshould not exceed one month. If the period is longer, the system will generate error 403 with proper description."
+					},
+					"response": []
+				},
+				{
+					"name": "Site Energy - Detailed",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/energyDetails?meters=PRODUCTION,CONSUMPTION&timeUnit=DAY&startTime={{START_DATE_TIME}}&endTime={{END_DATE_TIME}}",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"site",
+								"{{SITE_ID}}",
+								"energyDetails"
+							],
+							"query": [
+								{
+									"key": "meters",
+									"value": "PRODUCTION,CONSUMPTION"
+								},
+								{
+									"key": "timeUnit",
+									"value": "DAY"
+								},
+								{
+									"key": "startTime",
+									"value": "{{START_DATE_TIME}}"
+								},
+								{
+									"key": "endTime",
+									"value": "{{END_DATE_TIME}}"
+								}
+							]
+						},
+						"description": "Description: Detailed site energy measurements from meters such as consumption, export (feed-in), import (purchase), etc.\n\nNote: Calculated meter readings (also referred to as \"virtual meters\"), such as self-consumption, are calculated using the data\nmeasured by the meter and the inverters.\n\nUsage limitation: This API is limited to:\n- A year when using daily resolution (timeUnit=DAY)\n- A month when using hourly resolution of higher (timeUnit=QUARTER_OF_AN_HOUR or\ntimeUnit=HOUR)\n- Lower resolutions (weekly, monthly, yearly) have no period limitation\n\nIn case the requested resolution is not allowed for the requested period, error 403 with proper description will be returned."
+					},
+					"response": []
+				},
+				{
+					"name": "Site Power Flow",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/currentPowerFlow",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"site",
+								"{{SITE_ID}}",
+								"currentPowerFlow"
+							]
+						},
+						"description": "Description: Retrieves the current power flow between all elements of the site including PV array, storage (battery), loads\n(consumption) and grid.\n\nNote: Applies when export , import and consumption can be measured."
+					},
+					"response": []
+				},
+				{
+					"name": "Storage Information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/storageData?startTime={{END_DATE_TIME}}&endTime={{END_DATE_TIME}}",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"site",
+								"{{SITE_ID}}",
+								"storageData"
+							],
+							"query": [
+								{
+									"key": "serials",
+									"value": "1111,2222",
+									"disabled": true
+								},
+								{
+									"key": "startTime",
+									"value": "{{END_DATE_TIME}}"
+								},
+								{
+									"key": "endTime",
+									"value": "{{END_DATE_TIME}}"
+								}
+							]
+						},
+						"description": "Get detailed storage information from batteries: the state of energy, power and lifetime energy.\n\nNote: Applicable to systems with batteries."
+					},
+					"response": []
+				},
+				{
+					"name": "Site Image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/siteImage/logo.jpg",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"site",
+								"{{SITE_ID}}",
+								"siteImage",
+								"logo.jpg"
+							],
+							"query": [
+								{
+									"key": "hash",
+									"value": "123456789",
+									"description": "The image hash",
+									"disabled": true
+								},
+								{
+									"key": "maxWidth",
+									"value": null,
+									"description": "The maximum width to scale this image",
+									"disabled": true
+								},
+								{
+									"key": "maxHeight",
+									"value": null,
+									"description": "The maximum height to scale this image",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Display the site image as uploaded by the user.\n\n- **Performance:** The image element returns with a hash element, which is consistent as long as the image is not changed.\nWhen executing the Site Image API while using the hash element, the server matches the image hash and the hash sent in\nthe URL. If a match is found, the API returns an HTTP 304 code. In case the image hash that appears in the URL is different\nthan the one stored in the server, the image will be downloaded.\nWhen using the maxWidth and MaxHeight parameters, the hash element will be ignored.\n- **Image sizes:** By default, the API returns the same image that was uploaded to the monitoring portal. If an image in a\ndifferent scale is required, the API supports it via the maxWidth and maxHeight parameters. The system will scale the\nimage while keeping the aspect ratio of the original image, so the returned image will be smaller."
+					},
+					"response": []
+				},
+				{
+					"name": "Site Environmental Benefits",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/envBenefits?systemUnits=Metrics",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"site",
+								"{{SITE_ID}}",
+								"envBenefits"
+							],
+							"query": [
+								{
+									"key": "systemUnits",
+									"value": "Metrics",
+									"description": "The system units used when returning gas emission\nsavings.\nValid Values: Metrics, Imperial – note systemUnits are\ncase sensitive.\nIf systemUnits are not specified, the logged in user system\nunits are used."
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Installer Logo Image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/installerImage/logo.jpg",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"site",
+								"{{SITE_ID}}",
+								"installerImage",
+								"logo.jpg"
+							],
+							"query": [
+								{
+									"key": "hash",
+									"value": "123456789",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Return the site installer logo image as uploaded by the user. If such an image does not exist, the account installer\nlogo is returned."
+					},
+					"response": []
+				}
+			]
 		},
 		{
-			"name": "Inventory",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/inventory?api_key={{API_KEY}}",
-					"protocol": "https",
-					"host": [
-						"monitoringapi",
-						"solaredge",
-						"com"
-					],
-					"path": [
-						"site",
-						"{{SITE_ID}}",
-						"inventory"
-					],
-					"query": [
-						{
-							"key": "api_key",
-							"value": "{{API_KEY}}"
+			"name": "Site Equipment",
+			"item": [
+				{
+					"name": "Components List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/equipment/{{SITE_ID}}/list",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"equipment",
+								"{{SITE_ID}}",
+								"list"
+							]
+						},
+						"description": ": Return a list of inverters/SMIs in the specific site."
+					},
+					"response": []
+				},
+				{
+					"name": "Inventory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/inventory",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"site",
+								"{{SITE_ID}}",
+								"inventory"
+							]
 						}
-					]
+					},
+					"response": []
+				},
+				{
+					"name": "Inverter Technical Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/equipment/{{SITE_ID}} /{{INVERTER_SN}}/data?startTime={{START_DATE_TIME}}&endTime={{END_DATE_TIME}}",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"equipment",
+								"{{SITE_ID}} ",
+								"{{INVERTER_SN}}",
+								"data"
+							],
+							"query": [
+								{
+									"key": "startTime",
+									"value": "{{START_DATE_TIME}}"
+								},
+								{
+									"key": "endTime",
+									"value": "{{END_DATE_TIME}}"
+								}
+							]
+						},
+						"description": "Return specific inverter data for a given timeframe.\n\n**Usage limitation:** This API is limited to one-week period. This means that the period between endTime and startTime should\nnot exceed one week). If the period is longer, the system will generate error 403 with proper description."
+					},
+					"response": []
+				},
+				{
+					"name": "Equipment Change Log",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/equipment/{{SITE_ID}}/{{INVERTER_SN}}/changeLog",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"equipment",
+								"{{SITE_ID}}",
+								"{{INVERTER_SN}}",
+								"changeLog"
+							]
+						},
+						"description": "Returns a list of equipment component replacements ordered by date. This method is applicable to inverters,\noptimizers, batteries and gateways.\n\n`INVERTER_SN` can also be Inverter, battery, optimizer or gateway short serial number"
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Inverter Technical Data",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://monitoringapi.solaredge.com/equipment/{{SITE_ID}} /{{INVERTER_SN}}/data?startTime={{START_DATE_TIME}}&endTime={{END_DATE_TIME}}&api_key={{API_KEY}}",
-					"protocol": "https",
-					"host": [
-						"monitoringapi",
-						"solaredge",
-						"com"
-					],
-					"path": [
-						"equipment",
-						"{{SITE_ID}} ",
-						"{{INVERTER_SN}}",
-						"data"
-					],
-					"query": [
-						{
-							"key": "startTime",
-							"value": "{{START_DATE_TIME}}"
+			"name": "Accounts List",
+			"item": [
+				{
+					"name": "Account List API",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/accounts/list",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"accounts",
+								"list"
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "5",
+									"description": "The maximum number of accounts returned by this call. If\nyou have more than 100 sites, just request another 100\nsites with startIndex=100. This will fetch sites 100-199.",
+									"disabled": true
+								},
+								{
+									"key": "searchText",
+									"value": "someText",
+									"description": "Search text for this account. Searchable properties:\n- Name – the account name\n- Notes\n- Email – contact person email\n- Country\n- State\n- City\n- Zip\n- Full address",
+									"disabled": true
+								},
+								{
+									"key": "sortProperty",
+									"value": "name",
+									"description": "A sorting option for this account list, based on one of its\nproperties.\nAvailable sort properties:\n- Name – sort by account name\n- country – sort by account country\n- city – sort by account city\n- address – sort by account address\n- zip – sort by account zip code\n- fax – sort by account fax number\n- phone – sort by account phone\n- notes – sort by account notes",
+									"disabled": true
+								},
+								{
+									"key": "sortOrder",
+									"value": "ASC",
+									"description": "Sort order for the sort property. Allowed values are ASC\n(ascending) and DESC (descending).",
+									"disabled": true
+								},
+								{
+									"key": "startIndex",
+									"value": null,
+									"description": "The first account index to be returned in the results",
+									"disabled": true
+								}
+							]
 						},
-						{
-							"key": "endTime",
-							"value": "{{END_DATE_TIME}}"
-						},
-						{
-							"key": "api_key",
-							"value": "{{API_KEY}}"
-						}
-					]
+						"description": "Return the account and list of sub-accounts related to the given token. This API accepts parameters for convenient\nsearch, sorting and pagination."
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Account List API",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://monitoringapi.solaredge.com/accounts/list?size=5&searchText=+&sortProperty=name&sortOrder=ASC&api_key={{API_KEY}}",
-					"protocol": "https",
-					"host": [
-						"monitoringapi",
-						"solaredge",
-						"com"
-					],
-					"path": [
-						"accounts",
-						"list"
-					],
-					"query": [
-						{
-							"key": "size",
-							"value": "5"
+			"name": "Meters",
+			"item": [
+				{
+					"name": "Meters Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/meters?meters=Production,Consumption,FeedIn,Purchased&startTime={{START_DATE_TIME}}&endTime={{END_DATE_TIME}}&timeUnit=DAY",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"site",
+								"{{SITE_ID}}",
+								"meters"
+							],
+							"query": [
+								{
+									"key": "meters",
+									"value": "Production,Consumption,FeedIn,Purchased",
+									"description": "Select specific meters only. If this value is omitted, all meter readings are\nreturned.\nValue shall include entries from the following list separated by comma:\n- Production- AC production power meter / inverter production AC power\n(fallback)\n- Consumption - Consumption meter\n- FeedIn - Exported to grid meter\n- Purchased - Imported power from grid meter"
+								},
+								{
+									"key": "startTime",
+									"value": "{{START_DATE_TIME}}"
+								},
+								{
+									"key": "endTime",
+									"value": "{{END_DATE_TIME}}"
+								},
+								{
+									"key": "timeUnit",
+									"value": "DAY",
+									"description": "Aggregation granularity, see Time Unit on page 53.\nDefault: DAY.\nAllowed values are: QUARTER_OF_AN_HOUR, HOUR, DAY, WEEK,\nMONTH, YEAR"
+								}
+							]
 						},
-						{
-							"key": "searchText",
-							"value": "+"
-						},
-						{
-							"key": "sortProperty",
-							"value": "name"
-						},
-						{
-							"key": "sortOrder",
-							"value": "ASC"
-						},
-						{
-							"key": "api_key",
-							"value": "{{API_KEY}}"
-						}
-					]
+						"description": "Returns for each meter on site its lifetime energy reading, metadata and the device to which it’s connected to."
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Sensors API",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://monitoringapi.solaredge.com/equipment/{{SITE_ID}}/sensors?api_key={{API_KEY}}",
-					"protocol": "https",
-					"host": [
-						"monitoringapi",
-						"solaredge",
-						"com"
-					],
-					"path": [
-						"equipment",
-						"{{SITE_ID}}",
-						"sensors"
-					],
-					"query": [
-						{
-							"key": "api_key",
-							"value": "{{API_KEY}}"
-						}
-					]
+			"name": "Sensors",
+			"item": [
+				{
+					"name": "Sensors List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/equipment/{{SITE_ID}}/sensors",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"equipment",
+								"{{SITE_ID}}",
+								"sensors"
+							]
+						},
+						"description": "Returns a list of all the sensors in the site, and the device to which they are connected."
+					},
+					"response": []
+				},
+				{
+					"name": "Sensors Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/sensors?startDate={{START_DATE_TIME}}&endDate={{END_DATE_TIME}}",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"site",
+								"{{SITE_ID}}",
+								"sensors"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "{{START_DATE_TIME}}"
+								},
+								{
+									"key": "endDate",
+									"value": "{{END_DATE_TIME}}"
+								}
+							]
+						},
+						"description": "Returns the data of all the sensors in the site, by the gateway they are connected to.\n\n**Usage limitation:** This API is limited to one-week period. This means that the period between endDate and startDate should\nnot exceed one week). If the period is longer, the system will generate error 403 with a description."
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "Data Period",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/dataPeriod?api_key={{API_KEY}}",
-					"protocol": "https",
-					"host": [
-						"monitoringapi",
-						"solaredge",
-						"com"
-					],
-					"path": [
-						"site",
-						"{{SITE_ID}}",
-						"dataPeriod"
-					],
-					"query": [
-						{
-							"key": "api_key",
-							"value": "{{API_KEY}}"
-						}
-					]
+			"name": "API Versions",
+			"item": [
+				{
+					"name": "Current Version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/version/current",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"version",
+								"current"
+							]
+						},
+						"description": "Return the most updated version number in <major.minor.revision> format."
+					},
+					"response": []
+				},
+				{
+					"name": "Support Version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://monitoringapi.solaredge.com/version/supported",
+							"protocol": "https",
+							"host": [
+								"monitoringapi",
+								"solaredge",
+								"com"
+							],
+							"path": [
+								"version",
+								"supported"
+							]
+						},
+						"description": "Return a list of supported version numbers in <major.minor.revision> format."
+					},
+					"response": []
 				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{API_KEY}}",
+				"type": "string"
 			},
-			"response": []
+			{
+				"key": "key",
+				"value": "api_key",
+				"type": "string"
+			},
+			{
+				"key": "in",
+				"value": "query",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		},
 		{
-			"name": "Site Overview",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {},
-				"url": {
-					"raw": "https://monitoringapi.solaredge.com/site/{{SITE_ID}}/overview?api_key={{API_KEY}}",
-					"protocol": "https",
-					"host": [
-						"monitoringapi",
-						"solaredge",
-						"com"
-					],
-					"path": [
-						"site",
-						"{{SITE_ID}}",
-						"overview"
-					],
-					"query": [
-						{
-							"key": "api_key",
-							"value": "{{API_KEY}}"
-						}
-					]
-				}
-			},
-			"response": []
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_KEY",
+			"value": ""
+		},
+		{
+			"key": "SITE_ID",
+			"value": "1"
+		},
+		{
+			"key": "START_DATE",
+			"value": "2020-09-03"
+		},
+		{
+			"key": "END_DATE",
+			"value": "2021-04-27"
+		},
+		{
+			"key": "START_DATE_TIME",
+			"value": "2021-05-04%2000:00:00"
+		},
+		{
+			"key": "END_DATE_TIME",
+			"value": "2021-05-10%2000:00:00"
+		},
+		{
+			"key": "INVERTER_SN",
+			"value": ""
+		},
+		{
+			"key": "SITES_ID",
+			"value": "1,2"
 		}
 	]
 }
