@@ -3,7 +3,7 @@
 A Postman collection for [SolarEdge API](https://www.solaredge.com/sites/default/files/se_monitoring_api.pdf)
 
 
-<img src="https://www.solaredge.com/sites/default/files/logo.svg" alt="drawing" height="80" width="160"/> API in 
+<img src="https://logo.clearbit.com/solaredge.com" alt="drawing" height="80" width="80"/> API in 
 <img src="https://logo.clearbit.com/postman.com" alt="drawing" height="80" width="80"/>
 
 Requests beginning with **[!]** haven't yet been documented.
